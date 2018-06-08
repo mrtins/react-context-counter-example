@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const counterContext = React.createContext();
 const Provider = counterContext.Provider;
 
-export const Consumer = counterContext.Consumer;
+export const CounterConsumer = counterContext.Consumer;
 
 export default class CounterProvider extends Component {
   constructor(props) {

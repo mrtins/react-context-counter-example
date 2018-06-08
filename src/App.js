@@ -1,26 +1,13 @@
 import React, { Component } from 'react';
 
-import CounterProvider, { Consumer } from './providers/CounterProvider';
-import Count from './components/Count'
-import Uncount from './components/Uncount';
+import Container from './components/Container';
 
 export default class App extends Component {
   render() {
     return (
-      <CounterProvider>
-        <div>
-          <Consumer>
-            {(consumer) => (
-              <div>
-                <p>{consumer.counter}</p>
-              </div>
-            )}
-          </Consumer>
-
-          <Count />
-          <Uncount />
-        </div>
-      </CounterProvider>
+      <div>
+        <Container />
+      </div>
     );
   }
 }
