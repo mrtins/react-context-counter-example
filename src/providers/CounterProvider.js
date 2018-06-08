@@ -13,6 +13,7 @@ export default class CounterProvider extends Component {
       counter: 0,
       plusOne: this.plusOne,
       minusOne: this.minusOne,
+      minusFive: this.minusFive,
       resetCounter: this.resetCounter
     }
   }
@@ -25,8 +26,8 @@ export default class CounterProvider extends Component {
     this.setState({ counter: this.state.counter - 1 });
   }
 
-  resetCounter = () => {
-    this.setState({ counter: 0 });
+  minusFive = () => {
+    this.setState({ counter: this.state.counter - 5 });
   }
 
   render() {

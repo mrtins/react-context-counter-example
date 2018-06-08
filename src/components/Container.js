@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
 
 import CounterProvider from '../providers/CounterProvider';
 
 import Counter from './Counter';
-import Count from './buttons/PlusOneButton';
-import Uncount from './buttons/MinusOneButton';
+import PlusOneButton from './buttons/PlusOneButton';
+import MinusButton from './buttons/MinusButton';
 
 export default class Container extends Component {
   render() {
@@ -13,8 +12,8 @@ export default class Container extends Component {
       <CounterProvider>
         <div style={this.styles.container}>
           <Counter />
-          <Count />
-          <Uncount />
+          <PlusOneButton />
+          <MinusButton />
         </div>
       </CounterProvider>
     )
