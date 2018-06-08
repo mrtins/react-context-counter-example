@@ -1,4 +1,6 @@
-# React.Js Counter With React Context
+# React Counter With React Context
+
+Simple React Counter example using the new React Context API.
 
 ## Requirements
 
