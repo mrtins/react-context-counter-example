@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import CounterProvider from './providers/CounterProvider';
+import CounterProvider, { Consumer } from './providers/CounterProvider';
 import Count from './components/Count'
 import Uncount from './components/Uncount';
 
@@ -9,13 +9,13 @@ export default class App extends Component {
     return (
       <CounterProvider>
         <div>
-          <CounterProvider.Consumer>
+          <Consumer>
             {(consumer) => (
               <div>
-                <p>consumer.counter</p>
+                <p>{consumer.counter}</p>
               </div>
             )}
-          </CounterProvider.Consumer>
+          </Consumer>
 
           <Count />
           <Uncount />

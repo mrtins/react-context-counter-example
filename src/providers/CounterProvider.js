@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
-import { Context as Provider } from './Context';
+const counterContext = React.createContext();
+const Provider = counterContext.Provider;
+
+export const Consumer = counterContext.Consumer;
 
 export default class CounterProvider extends Component {
   constructor(props) {

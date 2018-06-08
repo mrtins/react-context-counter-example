@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 
 import { Consumer } from '../providers/CounterProvider';
-import Reset from './Reset';
 
-export default class Uncount extends Component {
+export default class Reset extends Component {
   render() {
     return (
       <div>
         <Consumer>
           {(counter) => (
             <div>
-              <button onClick={counter.minusOne}>---</button>
-              <Reset />
+              <button onClick={counter.resetCounter}>Reset</button>
             </div>
           )}
         </Consumer>

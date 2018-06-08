@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import { Context as Consumer } from '../providers/Context';
+import { Consumer } from '../providers/CounterProvider';
 
-export default class Person extends Component {
+export default class Count extends Component {
   render() {
     return (
       <div>
