@@ -2,9 +2,10 @@
 
 Simple React Counter example using the new React Context API.  
 
-<a href="https://codesandbox.io/s/kwzloxjox5">
+<a href="https://codesandbox.io/s/kwzloxjox5?module=%2Fsrc%2Fproviders%2FCounterProvider.js" target="_blank">
   <img alt="Edit react-context-counter-example" src="https://codesandbox.io/static/img/play-codesandbox.svg">
 </a>
+
 
 ## Requirements
 
