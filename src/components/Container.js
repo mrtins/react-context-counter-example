@@ -4,7 +4,7 @@ import CounterProvider from '../providers/CounterProvider';
 
 import Counter from './Counter';
 import MinusButton from './buttons/MinusButton';
-import Wrapper from './buttons/Wrapper';
+import PlusOneButton from './buttons/PlusOneButton';
 
 export default class Container extends Component {
   render() {
@@ -13,7 +13,7 @@ export default class Container extends Component {
         <CounterProvider>
           <div style={this.styles.container}>
             <Counter />
-            <Wrapper />
+            <PlusOneButton />
             <MinusButton />
           </div>
         </CounterProvider>

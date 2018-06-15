@@ -3,22 +3,26 @@ import { Button } from 'react-bootstrap';
 
 import { CounterConsumer } from '../../providers/CounterProvider';
 
-export default class PlusOneButton extends Component {
+class PlusOneButton extends Component {
   constructor(props) {
     super(props);
-    console.log('PlusOneButton', this.props);
+
+    this.click = this.click.bind(this);
   }
 
-  componentDidUpdate() {
-    console.log('this.props', this.props);
+  componentDidMount() {
+  }
+
+  click() {
+    this.props.counter.plusOne();
   }
 
   render() {
     return (
-      <div>
-        <div style={this.styles.paddingButton}>
-          <Button bsStyle="primary" onClick={this.props.counter.plusOne}>+++</Button>
-        </div>
+      <div style={this.styles.paddingButton}>
+        <Button bsStyle="primary" onClick={this.click}>
+          +++
+        </Button>
       </div>
     )
   }
@@ -29,3 +33,9 @@ export default class PlusOneButton extends Component {
     }
   }
 }
+
+export default forwardRef((props, ref) => (
+  <CounterConsumer>
+    {counter => <PlusOneButton {...props} ref={ref} counter={counter} />}
+  </CounterConsumer>
+));
